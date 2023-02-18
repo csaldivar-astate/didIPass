@@ -1,3 +1,3 @@
-# Did I Pass?
+# Did I Pass? Part 2:
 
-This solution code implements the first part of the **Did I Pass?** assignment for the first two endpoints in the following API specification: https://app.swaggerhub.com/apis-docs/csaldivar-astate/Did_I_Pass/1.0.0#/.
+For this assignment you must implement the last three endpoints in the following API specification: https://app.swaggerhub.com/apis-docs/csaldivar-astate/Did_I_Pass/1.0.0#/.

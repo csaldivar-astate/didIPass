@@ -32,4 +32,29 @@ function getStudent(studentName: string): Student | undefined {
   return students[studentName];
 }
 
-export { students, addStudent, getStudent };
+function updateStudentGrade(
+  studentName: string,
+  assignmentName: string,
+  newGrade: number
+): boolean {
+  const student = getStudent(studentName);
+  if (!student) {
+    console.log(`Didn't find person ${studentName}`);
+    return false;
+  }
+
+  const assignment = student.weights.assignmentWeights.find(
+    (grade: CourseGrade) => grade.name === assignmentName
+  );
+
+  if (!assignment) {
+    console.log(`Didn't find assignment ${assignmentName}`);
+    return false;
+  }
+
+  assignment.grade = newGrade;
+  student.currentAverage = calculateAverage(student.weights);
+  return true;
+}
+
+export { students, addStudent, getStudent, updateStudentGrade };
